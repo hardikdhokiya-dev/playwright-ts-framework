@@ -21,17 +21,17 @@ export interface RegistrationData{
 
 export class RegistrationPage {
 
-    private readonly page : Page ;
-    private readonly formHeading : Locator;
-    private readonly txtFirstName: Locator;
-    private readonly txtLastName : Locator;
-    private readonly txtEmail : Locator;
-    private readonly txtTelephone : Locator;
-    private readonly txtPassword : Locator;
-    private readonly txtConfirmPassword : Locator;
-    private readonly chkdPolicy : Locator;
-    private readonly btnContinue : Locator;
-    private readonly msgConfirmation : Locator;
+        private readonly page : Page ;
+        private readonly formHeading : Locator;
+        private readonly txtFirstName: Locator;
+        private readonly txtLastName : Locator;
+        private readonly txtEmail : Locator;
+        private readonly txtTelephone : Locator;
+        private readonly txtPassword : Locator;
+        private readonly txtConfirmPassword : Locator;
+        private readonly chkdPolicy : Locator;
+        private readonly btnContinue : Locator;
+        private readonly msgConfirmation : Locator;
 
 
     constructor (page : Page){

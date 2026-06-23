@@ -1,0 +1,20 @@
+[
+    {
+
+        "testName" : "valid login",
+        "emial" : "dalestyne@gmail.com",
+        "password" : "dalestyne@",
+        "expected" : "sucess"
+
+    },
+
+    {
+
+        "testName" : "invalid login",
+        "emial" : "dalest@gmail.com",
+        "password" : "dalne@",
+        "expected" : "falure"
+
+    }
+
+] 
