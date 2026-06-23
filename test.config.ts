@@ -7,8 +7,8 @@ export class TestConfig {
 export class TestData {
 
     // login credentials (test account)
-    public static readonly email = "pasdf@abc.com";
-    public static readonly password = "test@123";
+    public static readonly email = "dalestyne@gmail.com";
+    public static readonly password = "dalestyne@";
 
     // product details
     public static readonly productName = "MacBook";

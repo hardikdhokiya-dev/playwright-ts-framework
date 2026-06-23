@@ -32,7 +32,11 @@ export class HomePage{
         await this.lnkMyAccount.click();
     }
 
-    // Enter product name in search box
+    /**
+     * Enter product name in search box
+     * @param pName 
+     */
+
     async enterProductName(pName: string): Promise<void> {
         await this.txtSearchBox.fill(pName); // Note: fill() clears the input automatically
     }
