@@ -33,7 +33,7 @@ export class RegistrationPage {
         private readonly btnContinue : Locator;
         private readonly msgConfirmation : Locator;
 
-
+ 
     constructor (page : Page){
 
         this.page = page;
