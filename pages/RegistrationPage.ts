@@ -66,7 +66,7 @@ export class RegistrationPage {
      * enter the first name
      * @param fName 
      */
-    async enterFirstName(fName : string) : Promise <void> {
+    async setFirstName(fName : string) : Promise <void> {
         await this.txtFirstName.fill(fName);
     }
 
@@ -74,7 +74,7 @@ export class RegistrationPage {
      * enter the last name
      * @param lName 
      */
-    async enterlastName(lName : string) : Promise <void> {
+    async setlastName(lName : string) : Promise <void> {
         await this.txtLastName.fill(lName);
     }
 
@@ -82,7 +82,7 @@ export class RegistrationPage {
      * enter email
      * @param eMail
      */
-    async enterEmail(eMail : string) : Promise <void> {
+    async setEmail(eMail : string) : Promise <void> {
         await this.txtEmail.fill(eMail);
     }
 
@@ -90,7 +90,7 @@ export class RegistrationPage {
      * enter telephone number
      * @param phoneNumber 
      */
-    async enterTelephone(phoneNumber : string) : Promise <void> {
+    async setTelephone(phoneNumber : string) : Promise <void> {
         await this.txtTelephone.fill(phoneNumber);
     }
 
@@ -98,7 +98,7 @@ export class RegistrationPage {
      * enter password
      * @param password 
      */
-    async enterPassword(password : string) : Promise <void> {
+    async setPassword(password : string) : Promise <void> {
         await this.txtPassword.fill(password);
     }
 
@@ -106,7 +106,7 @@ export class RegistrationPage {
      * enter confirm password
      * @param confirmPassword 
      */
-    async enterConfirmPassword(confirmPassword : string) : Promise <void> {
+    async setConfirmPassword(confirmPassword : string) : Promise <void> {
         await this.txtConfirmPassword.fill(confirmPassword);
     }
 
@@ -148,12 +148,12 @@ export class RegistrationPage {
      */
     async fillRegiserUserDetail( data : RegistrationData){
 
-        await this.enterFirstName(data.firstName);
-        await this.enterlastName(data.lastName);
-        await this.enterEmail(data.email);
-        await this.enterTelephone(data.telephone);
-        await this.enterPassword(data.password);
-        await this.enterConfirmPassword(data.confirmPassword);
+        await this.setFirstName(data.firstName);
+        await this.setlastName(data.lastName);
+        await this.setEmail(data.email);
+        await this.setTelephone(data.telephone);
+        await this.setPassword(data.password);
+        await this.setConfirmPassword(data.confirmPassword);
 
         await this.clickRadioButton(data.newsletterSubscribe);
         await this.checkPolicy(data.privacyPolicy);
