@@ -27,17 +27,28 @@ export class HomePage{
         return await this.logo.isVisible();
     }
 
-     // Click on My Account
+    // Click on My Account
     async clickMyAccount(): Promise<void> {
         await this.lnkMyAccount.click();
     }
 
+    // Click on Register
+    async clickRegister() : Promise<void> {
+        await this.lnkRegister.click();
+    }
+
+    // Click on Login
+    async clickLogin() : Promise<void> {
+        await this.lnkLogin.click();
+    }
+
+    
     /**
      * Enter product name in search box
      * @param pName 
      */
 
-    async enterProductName(pName: string): Promise<void> {
+    async setProductName(pName: string): Promise<void> {
         await this.txtSearchBox.fill(pName); // Note: fill() clears the input automatically
     }
 
