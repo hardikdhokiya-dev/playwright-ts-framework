@@ -25,7 +25,7 @@ test ("User registration test using custom fixtures ", {tag : ["@sanity", "@regr
         await homePage.clickMyAccount();
         await homePage.clickRegister();
 
-        await registrationPage.fillRegiserUserDetail(TestDataFactory.getRegistrationData());
+        await registrationPage.fillRegisterUserDetail(TestDataFactory.getRegistrationData());
         await registrationPage.clickContinueButton();
 
         const confirmationMessage = await registrationPage.getConfirmationMessage();

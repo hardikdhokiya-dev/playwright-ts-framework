@@ -131,7 +131,7 @@ export class RegistrationPage {
      * This is an Object Parameter Pattern where I pass a structured data object (similar to a DTO) to improve readability, maintainability, and scalability of test methods.
      * @param data - Object containing registration data
      */
-    async fillRegiserUserDetail( data : RegistrationData){
+    async fillRegisterUserDetail( data : RegistrationData){
 
         await this.setFirstName(data.firstName);
         await this.setlastName(data.lastName);
