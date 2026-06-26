@@ -33,8 +33,8 @@ export class DataGeneratorUtility {
     /**
      * Generates a randomized telephone or phone number string.
      */
-    public static getPhoneNumber(): string {
-        return faker.phone.number();
+    public static getValidPhoneNumber(): string {
+        return faker.phone.number().replace(/\D/g, '').substring(0,10);
     }
 
     /**

@@ -1,4 +1,5 @@
-import { Page, Locator } from "@playwright/test";
+import { Page, Locator, expect } from "@playwright/test";
+import { TestConfig } from "../config/TestConfig";
 
 export class HomePage{
 
@@ -15,7 +16,7 @@ export class HomePage{
 
         this.page = page;
         this.logo = page.locator("#logo");
-        this.lnkMyAccount = page.getByRole("link", { name: /My Account/ });
+        this.lnkMyAccount = page.getByTitle("My Account");
         this.lnkRegister = page.getByRole("link", {name : "Register"});
         this.lnkLogin = page.getByRole("link", { name: 'Login' });
         this.txtSearchBox = page.getByRole("textbox" , {name : "Search"});
@@ -23,8 +24,12 @@ export class HomePage{
         
     }
 
-    async isLogoVisible() : Promise<boolean> {
-        return await this.logo.isVisible();
+    async navigate() {
+        await this.page.goto(TestConfig.BASE_URL);
+    }
+
+    async verifyHomePageLoaded(): Promise<void> {
+        await expect(this.logo).toBeVisible();
     }
 
     // Click on My Account
