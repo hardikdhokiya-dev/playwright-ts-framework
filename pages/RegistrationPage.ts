@@ -1,22 +1,7 @@
 import { Page , Locator} from "@playwright/test";
+import { RegistrationData } from "../interfaces/RegistrationData";
 
-/**
- * Shifts Failures from Runtime to Compile-Time
- * Decouples Test Data Setup from Method Execution
- * Improves Maintenance and Readability
- */
-export interface RegistrationData{
 
-        firstName : string;
-        lastName : string;
-        email : string;
-        telephone : string;
-        password : string;
-        confirmPassword : string;
-        newsletterSubscribe : "Yes" | "No"; // Enforced exact string literals matching the UI
-        privacyPolicy : boolean;
-
-}
 
 
 export class RegistrationPage {
@@ -114,7 +99,7 @@ export class RegistrationPage {
      * Click on radio button - Newsletter
      * @param value - "Yes" or "No" (case sensitive match for UI text)
      */
-    async clickRadioButton(value: "Yes" | "No") : Promise <void> {
+    async setRadioButton(value: "Yes" | "No") : Promise <void> {
         await this.page.getByRole("radio", { name: value, exact: true }).click();
 }
 
@@ -122,7 +107,7 @@ export class RegistrationPage {
      * check the privacy policy
      * @param condition 
      */
-    async checkPolicy(condition : boolean) : Promise<void>{
+    async setPolicy(condition : boolean) : Promise<void>{
         await this.chkdPolicy.setChecked(condition);
     }
 
@@ -146,7 +131,7 @@ export class RegistrationPage {
      * This is an Object Parameter Pattern where I pass a structured data object (similar to a DTO) to improve readability, maintainability, and scalability of test methods.
      * @param data - Object containing registration data
      */
-    async fillRegiserUserDetail( data : RegistrationData){
+    async fillRegisterUserDetail( data : RegistrationData){
 
         await this.setFirstName(data.firstName);
         await this.setlastName(data.lastName);
@@ -155,8 +140,8 @@ export class RegistrationPage {
         await this.setPassword(data.password);
         await this.setConfirmPassword(data.confirmPassword);
 
-        await this.clickRadioButton(data.newsletterSubscribe);
-        await this.checkPolicy(data.privacyPolicy);
+        await this.setRadioButton(data.newsletterSubscribe);
+        await this.setPolicy(data.privacyPolicy);
 
     }
 
