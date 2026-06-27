@@ -1,5 +1,10 @@
-
-
+/**
+ * TestData = Business layer
+ * login credentials
+ * product data
+ * expected values
+ * 
+ */
 
 export class ProductData {
 // product details

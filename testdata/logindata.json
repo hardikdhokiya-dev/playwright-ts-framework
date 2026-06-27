@@ -1,20 +1,14 @@
 [
-    {
-
-        "testName" : "valid login",
-        "emial" : "dalestyne@gmail.com",
-        "password" : "dalestyne@",
-        "expected" : "sucess"
-
-    },
-
-    {
-
-        "testName" : "invalid login",
-        "emial" : "dalest@gmail.com",
-        "password" : "dalne@",
-        "expected" : "falure"
-
-    }
-
-] 
+  {
+    "testName": "Valid login",
+    "email": "dalestyne@gmail.com",
+    "password": "dalestyne@",
+    "shouldLoginSucceed": true
+  },
+  {
+    "testName": "Invalid login",
+    "email": "dalest@gmail.com",
+    "password": "dalne@",
+    "shouldLoginSucceed": false
+  }
+]
