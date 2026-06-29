@@ -1,8 +1,8 @@
 [
   {
     "testName": "Valid login",
-    "email": "dalestyne@gmail.com",
-    "password": "dalestyne@",
+    "email": "stevesmith.ss@gmail.com",
+    "password": "stevesmith@",
     "shouldLoginSucceed": true
   },
   {

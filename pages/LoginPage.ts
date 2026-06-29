@@ -21,7 +21,7 @@ export class LoginPage{
     }
 
     /**
-     * Verify Login page loaded
+     * verify Login page loaded
      */
     async verifyLoginPageLoaded() : Promise<void>{
         await expect (this.txtLoginHeading).toBeVisible();

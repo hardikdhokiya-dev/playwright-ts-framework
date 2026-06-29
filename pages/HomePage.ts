@@ -53,8 +53,8 @@ export class HomePage{
      * @param pName 
      */
 
-    async setProductName(pName: string): Promise<void> {
-        await this.txtSearchBox.fill(pName); // Note: fill() clears the input automatically
+    async setProductName(productName: string): Promise<void> {
+        await this.txtSearchBox.fill(productName); // Note: fill() clears the input automatically
     }
 
     // Click on search icon
