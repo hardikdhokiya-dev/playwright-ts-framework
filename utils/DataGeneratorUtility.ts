@@ -76,7 +76,7 @@ export class DataGeneratorUtility {
     /**
      * Generates a physical mail postal registration code (ZIP code).
      */
-    public static getPin(): string {
+    public static getPostalCode(): string {
         return faker.location.zipCode();
     }
 
